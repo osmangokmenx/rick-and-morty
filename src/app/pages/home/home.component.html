@@ -5,17 +5,23 @@
     <app-search-bar name="query" (queryChange)="search($event)"></app-search-bar>
 
     <div class="col-md-3" *ngFor="let character of characters">
-      <div class="character-box">
-        <div class="character-box-status character-box-status--{{character.status.toLowerCase()}}">{{character.status}}</div>
-        <div class="character-box-image">
-          <img [src]="character.image" alt="{{character.name}}" />
+      <a [routerLink]="'/character/' + character.id">
+        <div class="character-box">
+          <div class="character-box-status character-box-status--{{character.status.toLowerCase()}}">{{character.status}}</div>
+          <div class="character-box-image">
+            <img [src]="character.image" alt="{{character.name}}" />
+          </div>
+          <div class="character-box-info">
+            <h5>{{character.name}}</h5>
+            <div><b>Species:</b> {{character.species}}</div>
+            <div><b>Gender:</b> {{character.gender}}</div>
+          </div>
         </div>
-        <div class="character-box-info">
-          <h5>{{character.name}}</h5>
-          <div><b>Species:</b> {{character.species}}</div>
-          <div><b>Gender:</b> {{character.gender}}</div>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
+</div>
+
+<div class="teleoprt-to-top" *ngIf="isGoToTopActive" (click)="scrollToTop()">
+  <img src="assets/images/tp.png" alt="Teleoprt To Top">
 </div>
