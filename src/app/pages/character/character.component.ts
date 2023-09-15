@@ -37,12 +37,18 @@ export class CharacterComponent {
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     if (id) {
-      this.CharacterService.getCharacter(id).subscribe((data) => {
-        setTimeout(() => {
+      this.CharacterService.getCharacter(id).subscribe(
+        (data) => {
+          setTimeout(() => {
+            this.loading = false;
+          }, 400);
+          this.character = data;
+        },
+        (err) => {
+          console.log('asdfasd', err);
           this.loading = false;
-        }, 400);
-        this.character = data;
-      });
+        }
+      );
     }
   }
 }
