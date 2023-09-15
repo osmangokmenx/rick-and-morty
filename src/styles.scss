@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 .logo {
   width: 80%;
@@ -72,7 +76,7 @@
 
 .search-box {
   border: 1px solid #42B4CA;
-  border-radius: 100px;
+  border-radius: 7px;
   outline: none;
   padding: 0.5rem 1rem;
   width: 100%;
@@ -80,7 +84,7 @@
 
 .custom-select {
   border: 1px solid #42B4CA;
-  border-radius: 100px;
+  border-radius: 7px;
   padding: 0.5rem 1rem;
   width: 100%;
   position: relative;
@@ -103,4 +107,37 @@
   top: 0;
   left: 0;
   display: flex;
+}
+
+.custom-label {
+  color: #42B4CA;
+}
+
+.picklerick {
+  position: fixed;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .portal-gun {
+    margin: 0 auto;
+    height: 70px;
+    width: auto !important;
+  }
+}
+
+.teleoprt-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 5rem;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
 }
