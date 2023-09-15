@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+
+.logo {
+  width: 80%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+
+  img {
+    width: 80%;
+    max-height: 130px;
+  }
+}
+
+.character-box {
+  border: 1px solid #42B4CA;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 7px;
+
+  h5 {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .character-box-image {
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+    }
+  }
+
+  .character-box-status {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #808080;
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem .6rem;
+    border-radius: 7px;
+    z-index: 10;
+
+    &--alive {
+      background-color: #57ce8e;
+    }
+
+    &--dead {
+      background-color: #ff0000;
+    }
+
+    &--unknown {
+      background-color: #808080;
+    }
+  }
+
+  .character-box-info {
+    padding: 1rem;
+  }
+}
+
+
+.search-box {
+  border: 1px solid #42B4CA;
+  border-radius: 100px;
+  outline: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.custom-select {
+  border: 1px solid #42B4CA;
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  position: relative;
+
+  select {
+    outline: none;
+    border: 0;
+    width: 98%;
+  }
+}
+
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: flex;
+}
