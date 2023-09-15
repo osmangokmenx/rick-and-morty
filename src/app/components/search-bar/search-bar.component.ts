@@ -26,4 +26,17 @@ export class SearchBarComponent {
       });
     }, 400);
   }
+  clearFilters(): void {
+    this.name = '';
+    this.species = '';
+    this.status = '';
+    this.gender = '';
+    console.log(1);
+    this.queryChange.emit({
+      name: this.name,
+      species: this.species,
+      gender: this.gender,
+      status: this.status,
+    });
+  }
 }
