@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { CharacterComponent } from './pages/character/character.component';
 
 export function playerFactory() {
   return player;
@@ -23,6 +24,7 @@ export function playerFactory() {
     HomeComponent,
     SearchBarComponent,
     LoaderComponent,
+    CharacterComponent,
   ],
   imports: [
     BrowserModule,
