@@ -31,7 +31,7 @@ export class SearchBarComponent {
     this.species = '';
     this.status = '';
     this.gender = '';
-    console.log(1);
+
     this.queryChange.emit({
       name: this.name,
       species: this.species,

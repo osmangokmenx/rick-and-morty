@@ -45,7 +45,6 @@ export class CharacterComponent {
           this.character = data;
         },
         (err) => {
-          console.log('asdfasd', err);
           this.loading = false;
         }
       );
